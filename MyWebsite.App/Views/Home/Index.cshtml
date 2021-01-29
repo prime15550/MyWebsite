@@ -1,0 +1,180 @@
+﻿@using MyWebsite.BussinessLayer
+@using MyWebsite.Entities
+@{
+    BilgilerManager bm = new BilgilerManager();
+    List<tblBilgiler> list = bm.GetBilgiler();
+    
+}
+
+<!-- Page Content-->
+<div class="container-fluid p-0">
+    <!-- About-->
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-2">
+                Tunç
+                <span class="text-primary">Gürsoy</span>
+            </h1>
+            <div class="subheading mb-5">
+                <a href="mailto:tuncgursoy@hotmail.com">tuncgursoy@hotmail.com</a>
+            </div>
+            <p class="lead mb-5">
+                I'm a future <span>Computer and Electrical Engineer</span> and third-year Engineering student who double major in Computer and Electrical-Electronics Engineering. I think that
+                with hard work and passion nothing is impossible. Building an idea from the scratch with hard work and passion is important skill. But if this skill to sake of the society, that skill becomes admirable one.
+                That's what I'm starving for it.
+            </p>
+            <div class="social-icons">
+                <a class="social-icon" href="@list.Find(x=>x.id==0).linkedinUrl"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="@list.Find(x=>x.id==0).githubUrl"><i class="fab fa-github"></i></a>
+                <a class="social-icon" href="@list.Find(x=>x.id==0).instagramUrl"><i class="fab fa-instagram"></i></a>
+                <a class="social-icon" href="@list.Find(x=>x.id==0).cvUrl"><i class="fa fa-file"></i></a>
+                
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    
+    <hr class="m-0" />
+    <!-- Education-->
+    <section class="resume-section" id="education">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">TED University</h3>
+                    <div class="subheading mb-3">Bachelor's degree (Double Major)</div>
+                    <div>Electrical and Electronics Engineering</div>
+                    <p>GPA: @list.Find(x => x.id == 0).ecpa</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">August 2019 - </span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">TED University</h3>
+                    <div class="subheading mb-3">Bachelor's degree</div>
+                    <div>Computer Engineering</div>
+                    <p>GPA: @list.Find(x => x.id == 0).cgpa</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">August 2017 - </span></div>
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">TED University</h3>
+                    <div class="subheading mb-3">Secondary Field</div>
+                    <div>Management</div>
+
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">August 2017 - </span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Jale Tezer Science High School</h3>
+                    <div class="subheading mb-3">High School</div>
+
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">2016 – 2017</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Hacı Ömer Tarman Anatolian High School </h3>
+                    <div class="subheading mb-3">High School</div>
+
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">2013 – 2016</span></div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- Skills-->
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Skills</h2>
+            <ul class="fa-ul mb-0">
+                <li>
+
+                    <span class="fa-li"><i class="fas fa-code"></i></span>
+                    Programming: C, C#, Java, Python, Kotlin
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-database"></i></span>
+                    Database: MsSQL, MySQL, PostgreSQL, MongoDB
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fab fa-windows"></i></span>
+                    Operation Systems:Windows, Linux (Ubuntu)
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-wrench"></i></span>
+                    SW Project Tools:YouTrack, GIT
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                    General: MS Office
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- Interests-->
+    <section class="resume-section" id="interests">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Interests</h2>
+            <p>Apart from being a Student and Coding, I enjoy most of my time being indoor. I love playing video games and watching movie or series mostly about sci-fi and fantasy genre. I spend a large amount of my free time exploring the latest technology advancements Renewable Energy Technology and IOT.When I'm outdoors, I enjoy trekking and swimming </p>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- Awards-->
+    <section class="resume-section" id="awards">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Certifications and Awards</h2>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                    .NET MVC Software Specialization Course - Certificate of Achievement
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                    Crash Course on Python
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                    Kotlin Android Development Certificate
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                    Goethe TEILNAHMEBESTÄTIGUNG A2.2
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                    Goethe TEILNAHMEBESTÄTIGUNG A2.1
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                    Goethe TEILNAHMEBESTÄTIGUNG A1.2
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-certificate"></i></span>
+                    Goethe TEILNAHMEBESTÄTIGUNG A1.1
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-award"></i></span>
+                    High Honored student 2019-2020 Spring Semester
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-award"></i></span>
+                    Honored student 2018-2019 Spring Semester
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-award"></i></span>
+                    High Honored student 2018-2019 Fall Semester
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-award"></i></span>
+                    High Honored student 2017-2018 Spring Semester
+                </li>
+
+            </ul>
+        </div>
+    </section>
+</div>
